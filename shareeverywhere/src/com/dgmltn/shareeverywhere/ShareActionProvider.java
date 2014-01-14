@@ -2,13 +2,12 @@ package com.dgmltn.shareeverywhere;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.view.ActionProvider;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.SubMenu;
 import android.view.View;
 
+import com.actionbarsherlock.view.ActionProvider;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.SubMenu;
 import com.dgmltn.shareeverywhere.ActivityChooserModel.ActivityResolveInfo;
 import com.dgmltn.shareeverywhere.ShareView.OnShareTargetSelectedListener;
 
