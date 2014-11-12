@@ -16,3 +16,21 @@ android {
         }
     }
 }
+
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            if (project.hasProperty('localMavenUser') && project.hasProperty('localMavenPassword')) {
+                def username = project.property('localMavenUser')
+                def password = project.property('localMavenPassword')
+                repository(url: project.property('localMavenUrl')) {
+                    authentication(userName: username, password: password)
+                }
+                snapshotRepository(url: project.property('localMavenSnapshotUrl')) {
+                    authentication(userName: username, password: password)
+                }
+            }
+        }
+    }
+}
